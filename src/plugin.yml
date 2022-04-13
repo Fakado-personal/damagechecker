@@ -1,0 +1,8 @@
+name: damagechecker
+version: 1.0
+api-version: 1.18
+main: me.fakado.damagechecker.Main
+authors:
+  - Fakado
+  - Quincy
+description: A plugin made for Quincy!!

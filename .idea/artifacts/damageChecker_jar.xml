@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="damageChecker:jar">
+    <output-path>$USER_HOME$/Desktop/minecraft spigot/plugins</output-path>
+    <root id="archive" name="damageChecker.jar">
+      <element id="module-output" name="damageChecker" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/spigot-api-1.18.2-R0.1-20220327.211529-26.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>
