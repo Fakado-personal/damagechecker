@@ -6,6 +6,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 public class onDamage implements Listener {
 
@@ -23,11 +24,17 @@ public class onDamage implements Listener {
        var damaged = e.getEntityType(); // The one who got damaged or hit
 
         // We need to check some things such as if user got hit by a real player or a mob...
-       if(damager == EntityType.PLAYER && damaged == EntityType.PLAYER) {
-           e.setDamage(0);
-           Bukkit.broadcastMessage("User has been hit by another player. No damage has been given.");
-       } else if(damager == EntityType.PLAYER && damaged != EntityType.PLAYER) return;
-       else if (damager != EntityType.PLAYER && damaged != EntityType.PLAYER) return;
+       if(damager == EntityType.PLAYER) {
+           if(damaged == EntityType.PLAYER){
+               if(damager == EntityType.ARROW) {
+                   e.setDamage(0);
+               }
+               else {
+                   e.setDamage(0);
+               }
+           }
+           else return;
+       }
     }
 
 }
